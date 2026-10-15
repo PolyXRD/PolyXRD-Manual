@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# 会话工作记忆不入库（与 PolyXRD 家族各软件仓一致）
+.workbuddy/
