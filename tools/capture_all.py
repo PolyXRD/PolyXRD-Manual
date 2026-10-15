@@ -223,8 +223,15 @@ def shot_synth():
     win.close()
 
 
+def shot_rutana():
+    """RutAna（GB/T 30793—2014 晶型比率测定）—— 抓图逻辑独立成 capture_rutana.py。"""
+    import capture_rutana
+    capture_rutana.main()
+
+
 if __name__ == "__main__":
     name = sys.argv[1] if len(sys.argv) > 1 else ""
     {"cifcalc": shot_cifcalc, "converter": shot_converter,
-     "getcif": shot_getcif, "synth": shot_synth}[name]()
+     "getcif": shot_getcif, "synth": shot_synth,
+     "rutana": shot_rutana}[name]()
     print("DONE", name)

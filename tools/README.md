@@ -12,8 +12,10 @@
 | `gen_getcif.py` | GetCIF v1.0.0 手册内容（14 页） |
 | `gen_synthpattern.py` | SynthPattern v1.3.1 手册内容（14 页） |
 | `gen_polyxrd.py` | PolyXRD v2.9.0 手册内容（27 页，融合 v2.7.0 手册 + v2.8.0 / v2.9.0 变更） |
+| `gen_rutana.py` | RutAna v1.0.0 手册内容（25 页，GB/T 30793—2014 晶型比率测定） |
 | `capture_all.py` | 四款软件的 GUI 自动抓图脚本（真实 Windows 平台短暂弹窗 + `widget.grab()`；离屏模式中文会变豆腐块，勿用） |
-| `shots/` | capture_all.py 抓取的原始截图（与 `manuals/<App>/img/` 同源） |
+| `capture_rutana.py` | RutAna GUI 抓图脚本：由**真实 core 计算**驱动（A 法测峰 / K 标定 / B 法 Rietveld 精修），虚拟标准样取自 PolyXRD-RutAna `tests/data/virtual/`（seed=20260701 可复现） |
+| `shots/` | capture_all.py / capture_rutana.py 抓取的原始截图（与 `manuals/<App>/img/` 同源） |
 | `screenshot-manual-to-pdf.zip` | 手册生成所用 WorkBuddy skill 包（存档） |
 
 ## 再生成一份手册
@@ -24,6 +26,8 @@ PYTHONPATH=tools python tools/gen_cifcalc.py
 # 产物直接落盘到 manuals/<App>/ 下的 PDF
 ```
 
+- 抓图脚本需用带 PySide6 的解释器、并在真实 Windows 显示平台运行
+  （`D:/Project/XRD/python310/python.exe tools/capture_rutana.py`；勿设 `QT_QPA_PLATFORM=offscreen`）。
 - 各 gen 脚本内的输出路径、截图目录均为 `PolyXRD-Manual` 仓库内的绝对路径，移动仓库位置后需相应调整。
 - 改动内容只需编辑 gen 脚本里的 `CONTENT`（纯数据结构），无需碰 `manual_lib.py`。
 

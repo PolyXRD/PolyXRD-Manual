@@ -13,7 +13,8 @@
 | **PolyXRD-Converter** | XRD 谱图格式转换器：30+ 格式读入、8 种格式写出、多厂商 RAW 二进制自动识别（岛津 / 理学 / Scintag / Bruker / MDI）、批量转换、角度轴护栏 | v1.4.1 | [manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf](manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf) | [PolyXRD/PolyXRD-Converter](https://github.com/PolyXRD/PolyXRD-Converter) |
 | **PolyXRD-CifCalc** | 面向 XRD 的 CIF 晶体结构检索与生成工具：联网 COD / 本地数据库 / 扩展源检索，CIF 派生与合成、结构微调、pymatgen 校验、VESTA 联动、三语界面 | v1.6.0 | [manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf](manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf) | [PolyXRD/PolyXRD-CifCalc](https://github.com/PolyXRD/PolyXRD-CifCalc) |
 | **PolyXRD-GetCIF** | CIF 检索与获取小工具（CifCalc 的轻量姊妹版）：COD / 本地库 / AMCSD / Materials Project / Atomly 五数据源，标准版与 Plus 版（含 3D 预览） | v1.0.0 | [manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf](manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-GetCIF](https://github.com/PolyXRD/PolyXRD-GetCIF) |
-| **PolyXRD-SynthPattern** | XRD 谱图合成：从 CIF 结构因子出发生成带真实仪器特征的模拟衍射谱（pseudo-Voigt 峰形、Kα2 双线、择优取向、晶粒尺寸 / 微应变展宽等），用于检索方法验证与教学 | v1.3.1 | [manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf](manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf) | [PolyXRD/PolyXRD-SynthPattern](https://github.com/PolyXRD/PolyXRD-SynthPattern) |
+| **PolyXRD-SynthPattern** | XRD 谱图合成：从 CIF 结构因子出发生成带真实仪器特征的模拟衍射谱（pseudo-Voigt 峰形、Kα2 双线、择优取向、晶粒尺寸 / 微应变展宽等）；用于检索方法验证与教学 | v1.3.1 | [manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf](manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf) | [PolyXRD/PolyXRD-SynthPattern](https://github.com/PolyXRD/PolyXRD-SynthPattern) |
+| **PolyXRD-RutAna** | 按 GB/T 30793—2014 测定 TiO₂ 颜料中锐钛型/金红石型比率：A 法（强度比值法，K 现场标定 + 双平行合格判定）与 B 法（Rietveld 全谱拟合，Hill–Howard 定量，Rwp ≤ 10%）双路线 | v1.0.0 | [manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.0.0.pdf](manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-RutAna](https://github.com/PolyXRD/PolyXRD-RutAna) |
 
 > 各软件的源代码仓库当前为**私有**；公开下载请前往各仓库的 **GitHub Releases** 页面（Release 与安装包公开可见）。
 
@@ -34,11 +35,18 @@ PolyXRD-CifCalc / GetCIF ──CIF──► GSAS-II / FullProf / MAUD / VESTA
         │
         ▼
 PolyXRD-SynthPattern ──模拟谱──► 检索算法验证 / 教学演示
+
+专用测定线（GB/T 30793—2014 · TiO₂ 颜料晶型比率）
+        │
+        ▼
+PolyXRD-RutAna ──A 法（强度比值 / K 标定 + 双平行）──► 锐钛型 : 金红石型 比率 + 检测报告
+              └──B 法（Rietveld 全谱拟合 / Hill–Howard）──┘
 ```
 
 - **拿到一份陌生谱图**：先用 Converter 认格式、转成标准文本，再进 PolyXRD 走完整分析流程。
 - **精修缺 CIF 初始模型**：用 CifCalc（全链路：检索 + 生成 + 微调 + 校验）或 GetCIF（只要一份 CIF）检索下载。
 - **验证检索算法 / 备课**：用 SynthPattern 从已知 CIF 合成「已知答案」的模拟谱。
+- **TiO₂ 颜料晶型比率检测**：用 RutAna 按 GB/T 30793—2014 出结果；A 法先用自己的标样现场标定 K，B 法直接全谱拟合，两者均可导出可归档的 HTML 报告。
 
 ## 手册内容说明
 
