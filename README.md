@@ -14,7 +14,7 @@
 | **PolyXRD-CifCalc** | 面向 XRD 的 CIF 晶体结构检索与生成工具：联网 COD / 本地数据库 / 扩展源检索，CIF 派生与合成、结构微调、pymatgen 校验、VESTA 联动、三语界面 | v1.6.0 | [manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf](manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf) | [PolyXRD/PolyXRD-CifCalc](https://github.com/PolyXRD/PolyXRD-CifCalc) |
 | **PolyXRD-GetCIF** | CIF 检索与获取小工具（CifCalc 的轻量姊妹版）：COD / 本地库 / AMCSD / Materials Project / Atomly 五数据源，标准版与 Plus 版（含 3D 预览） | v1.0.0 | [manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf](manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-GetCIF](https://github.com/PolyXRD/PolyXRD-GetCIF) |
 | **PolyXRD-SynthPattern** | XRD 谱图合成：从 CIF 结构因子出发生成带真实仪器特征的模拟衍射谱（pseudo-Voigt 峰形、Kα2 双线、择优取向、晶粒尺寸 / 微应变展宽等）；用于检索方法验证与教学 | v1.3.1 | [manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf](manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf) | [PolyXRD/PolyXRD-SynthPattern](https://github.com/PolyXRD/PolyXRD-SynthPattern) |
-| **PolyXRD-RutAna** | 按 GB/T 30793—2014 测定 TiO₂ 颜料中锐钛型/金红石型比率：A 法（强度比值法，K 现场标定 + 双平行合格判定）与 B 法（Rietveld 全谱拟合，Hill–Howard 定量，Rwp ≤ 10%）双路线 | v1.0.0 | [manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.0.0.pdf](manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-RutAna](https://github.com/PolyXRD/PolyXRD-RutAna) |
+| **PolyXRD-RutAna** | 按 GB/T 30793—2014 测定 TiO₂ 颜料中锐钛型/金红石型比率：A 法（强度比值法，K 现场标定 + 双平行合格判定）与 B 法（Rietveld 全谱拟合，Hill–Howard 定量，Rwp ≤ 10%）双路线 | v1.5.0 | [manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.5.0.pdf](manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.5.0.pdf) | [PolyXRD/PolyXRD-RutAna](https://github.com/PolyXRD/PolyXRD-RutAna) |
 
 > 各软件的源代码仓库当前为**私有**；公开下载请前往各仓库的 **GitHub Releases** 页面（Release 与安装包公开可见）。
 

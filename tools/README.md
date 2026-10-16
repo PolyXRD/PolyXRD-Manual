@@ -12,9 +12,10 @@
 | `gen_getcif.py` | GetCIF v1.0.0 手册内容（14 页） |
 | `gen_synthpattern.py` | SynthPattern v1.3.1 手册内容（14 页） |
 | `gen_polyxrd.py` | PolyXRD v2.9.0 手册内容（27 页，融合 v2.7.0 手册 + v2.8.0 / v2.9.0 变更） |
-| `gen_rutana.py` | RutAna v1.0.0 手册内容（25 页，GB/T 30793—2014 晶型比率测定） |
+| `gen_rutana.py` | RutAna v1.5.0 手册内容（35 页详细版：Setup 安装向导、注册与版次、批量计算、协议对齐、择优取向） |
 | `capture_all.py` | 四款软件的 GUI 自动抓图脚本（真实 Windows 平台短暂弹窗 + `widget.grab()`；离屏模式中文会变豆腐块，勿用） |
-| `capture_rutana.py` | RutAna GUI 抓图脚本：由**真实 core 计算**驱动（A 法测峰 / K 标定 / B 法 Rietveld 精修），虚拟标准样取自 PolyXRD-RutAna `tests/data/virtual/`（seed=20260701 可复现） |
+| `capture_rutana.py` | RutAna v1.5.0 GUI 抓图脚本：由**真实 core 计算**驱动（A 法测峰 / K 标定 / B 法 Rietveld / 批量），真实数据取自 PolyXRD-RutAna `tests/data/real/`（岛津 TiO₂ 数据集）；注册码截图自动打码 |
+| `capture_setup_wizard.ps1` | RutAna Setup 安装包（Inno Setup）向导抓图：Win32 BM_CLICK 驱动真实安装流程（无需前台焦点），PrintWindow 截图；需 UTF-8 BOM 保存 |
 | `shots/` | capture_all.py / capture_rutana.py 抓取的原始截图（与 `manuals/<App>/img/` 同源） |
 | `screenshot-manual-to-pdf.zip` | 手册生成所用 WorkBuddy skill 包（存档） |
 
