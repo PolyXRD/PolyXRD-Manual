@@ -18,7 +18,11 @@
     ("contact",)   # 末尾联系与许可块（自动生成）
 """
 import os
+import tempfile
+from pathlib import Path
+
 from PIL import Image as PILImage
+from PIL import ImageChops
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
@@ -130,13 +134,53 @@ def make_table(data, ratios=None):
     return t
 
 
+def _trim_uniform_border(path):
+    """裁掉截图四周与角点同色的空带，返回 (裁剪后路径或 None, (宽, 高))。
+
+    Qt 对话框常有成片的空白背景（实测快速精修向导顶部有 93 px 纯色带），
+    原样上图会把 16 cm 宽撑到 20 cm 高上限、独占一整页。只在「裁完仍保留
+    ≥55% 宽、≥35% 高」时才采用，避免把正常留边裁狠了。
+    """
+    try:
+        with PILImage.open(path) as im0:
+            im = im0.convert("RGB")
+        w, h = im.size
+        bg = im.getpixel((0, 0))
+        diff = ImageChops.difference(im, PILImage.new("RGB", im.size, bg)).convert("L")
+        bbox = diff.point(lambda v: 255 if v > 6 else 0).getbbox()
+        if not bbox:
+            return None, (w, h)
+        pad = 4
+        left, top, right, bottom = (
+            max(0, bbox[0] - pad), max(0, bbox[1] - pad),
+            min(w, bbox[2] + pad), min(h, bbox[3] + pad),
+        )
+        if (right - left) < 0.55 * w or (bottom - top) < 0.35 * h:
+            return None, (w, h)
+        if (left, top, right, bottom) == (0, 0, w, h):
+            return None, (w, h)
+        out = Path(tempfile.gettempdir()) / f"_manual_trim_{abs(hash(path)) % 10**8}.png"
+        im.crop((left, top, right, bottom)).save(out)
+        return out, (right - left, bottom - top)
+    except Exception:
+        try:
+            with PILImage.open(path) as im0:
+                return None, im0.size
+        except Exception:
+            return None, None
+
+
 def _shot(story, img_dir, filename, caption, max_width=16 * cm):
     path = os.path.join(img_dir, filename)
     if not os.path.exists(path):
         story.append(P(f"[截图缺失: {filename}]", "caption"))
         return
-    with PILImage.open(path) as im:
-        w, h = im.size
+    trimmed, size = _trim_uniform_border(path)
+    src = str(trimmed) if trimmed else path
+    if not size:
+        with PILImage.open(path) as im:
+            size = im.size
+    w, h = size
     aspect = h / w
     img_w, img_h = max_width, max_width * aspect
     max_h = 20 * cm
@@ -144,7 +188,7 @@ def _shot(story, img_dir, filename, caption, max_width=16 * cm):
         img_h = max_h
         img_w = img_h / aspect
     story.append(Spacer(1, 0.2 * cm))
-    story.append(Image(path, width=img_w, height=img_h))
+    story.append(Image(src, width=img_w, height=img_h))
     story.append(P(f"图 {caption}", "caption"))
 
 
