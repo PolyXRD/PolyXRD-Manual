@@ -9,7 +9,7 @@
 
 | 软件 | 定位 | 当前版本 | 使用手册（PDF） | 仓库 / 发行版 |
 |---|---|---|---|---|
-| **PolyXRD** | 多晶 X 射线衍射（XRD）图谱综合分析套件：数据加载 → 预处理 → 峰检测 → 物相检索（FoM 打分 / 四态元素过滤 / 候选去重）→ Rietveld 结构精修（GSAS-II / MAUD / FullProf 桥接）→ 报告 | v2.9.0 | [manuals/PolyXRD/PolyXRD使用手册-v2.9.0.pdf](manuals/PolyXRD/PolyXRD使用手册-v2.9.0.pdf) | [PolyXRD/PolyXRD](https://github.com/PolyXRD/PolyXRD) |
+| **PolyXRD** | 多晶 X 射线衍射（XRD）图谱综合分析套件：数据加载 → 预处理 → 峰检测 → 物相检索（FoM 打分 / 四态元素过滤 / 候选去重 / 多库外挂含 XinMatch 格式库）→ Rietveld 结构精修（GSAS-II / MAUD / FullProf 桥接）→ 报告 | v3.2.0 | [manuals/PolyXRD/PolyXRD使用手册-v3.2.0.pdf](manuals/PolyXRD/PolyXRD使用手册-v3.2.0.pdf) | [PolyXRD/PolyXRD](https://github.com/PolyXRD/PolyXRD) |
 | **PolyXRD-Converter** | XRD 谱图格式转换器：30+ 格式读入、8 种格式写出、多厂商 RAW 二进制自动识别（岛津 / 理学 / Scintag / Bruker / MDI）、批量转换、角度轴护栏 | v1.4.1 | [manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf](manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf) | [PolyXRD/PolyXRD-Converter](https://github.com/PolyXRD/PolyXRD-Converter) |
 | **PolyXRD-CifCalc** | 面向 XRD 的 CIF 晶体结构检索与生成工具：联网 COD / 本地数据库 / 扩展源检索，CIF 派生与合成、结构微调、pymatgen 校验、VESTA 联动、三语界面 | v1.6.0 | [manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf](manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf) | [PolyXRD/PolyXRD-CifCalc](https://github.com/PolyXRD/PolyXRD-CifCalc) |
 | **PolyXRD-GetCIF** | CIF 检索与获取小工具（CifCalc 的轻量姊妹版）：COD / 本地库 / AMCSD / Materials Project / Atomly 五数据源，标准版与 Plus 版（含 3D 预览） | v1.0.0 | [manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf](manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-GetCIF](https://github.com/PolyXRD/PolyXRD-GetCIF) |

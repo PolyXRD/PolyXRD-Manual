@@ -114,6 +114,10 @@ def make_table(data, ratios=None):
         style = "cellh" if r == 0 else "cell"
         wrapped.append([Paragraph(str(c), S[style]) for c in row])
     t = Table(wrapped, colWidths=widths, repeatRows=1)
+    # 表格整体不拆页: 拆到下一页只剩两三行会让整页几乎空白(实测 v3.2.0
+    # 手册第 10 页只剩「谱图交互」表的两行)。本套手册最长的表也就 6 行,
+    # 一页放得下, 整表挪到下一页反而好看。
+    t.splitByRow = 0
     t.setStyle(TableStyle([
         ("VALIGN", (0, 0), (-1, -1), "TOP"),
         ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
