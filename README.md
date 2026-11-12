@@ -1,80 +1,80 @@
-# PolyXRD 家族软件使用手册（PolyXRD Manual）
+# PolyXRD Family Software User Manual (PolyXRD Manual)
 
-本仓库集中收录 **PolyXRD 家族** 全部软件的中文 PDF 使用手册、界面截图与许可文件。
-各软件的源代码与发行版（exe 安装包 / Release）分别存放在各自的独立仓库中。
+This repository collects the Chinese PDF user manuals, UI screenshots and license files of all **PolyXRD Family** software in one place.
+The source code and distributions (exe installer / Release) of each software are stored in their own separate repositories.
 
 <div align="center"><img src="logo-horizontal.png" alt="PolyXRD Family" width="480"></div>
 
-## 家族成员一览
+## Family Members at a Glance
 
-| 软件 | 定位 | 当前版本 | 使用手册（PDF） | 仓库 / 发行版 |
+| Software | Positioning | Current Version | User Manual (PDF) | Repository / Release |
 |---|---|---|---|---|
-| **PolyXRD** | 多晶 X 射线衍射（XRD）图谱综合分析套件：数据加载 → 预处理 → 峰检测 → 物相检索（FoM 打分 / 四态元素过滤 / 候选去重 / 多库外挂含 XinMatch 格式库）→ Rietveld 结构精修（GSAS-II / MAUD / FullProf 桥接）→ 报告 | v3.2.0 | [manuals/PolyXRD/PolyXRD使用手册-v3.2.0.pdf](manuals/PolyXRD/PolyXRD使用手册-v3.2.0.pdf) | [PolyXRD/PolyXRD](https://github.com/PolyXRD/PolyXRD) |
-| **PolyXRD-Converter** | XRD 谱图格式转换器：30+ 格式读入、8 种格式写出、多厂商 RAW 二进制自动识别（岛津 / 理学 / Scintag / Bruker / MDI）、批量转换、角度轴护栏 | v1.4.1 | [manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf](manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf) | [PolyXRD/PolyXRD-Converter](https://github.com/PolyXRD/PolyXRD-Converter) |
-| **PolyXRD-CifCalc** | 面向 XRD 的 CIF 晶体结构检索与生成工具：联网 COD / 本地数据库 / 扩展源检索，CIF 派生与合成、结构微调、pymatgen 校验、VESTA 联动、三语界面 | v1.6.0 | [manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf](manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf) | [PolyXRD/PolyXRD-CifCalc](https://github.com/PolyXRD/PolyXRD-CifCalc) |
-| **PolyXRD-GetCIF** | CIF 检索与获取小工具（CifCalc 的轻量姊妹版）：COD / 本地库 / AMCSD / Materials Project / Atomly 五数据源，标准版与 Plus 版（含 3D 预览） | v1.0.0 | [manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf](manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-GetCIF](https://github.com/PolyXRD/PolyXRD-GetCIF) |
-| **PolyXRD-SynthPattern** | XRD 谱图合成：从 CIF 结构因子出发生成带真实仪器特征的模拟衍射谱（pseudo-Voigt 峰形、Kα2 双线、择优取向、晶粒尺寸 / 微应变展宽等）；用于检索方法验证与教学 | v1.3.1 | [manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf](manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf) | [PolyXRD/PolyXRD-SynthPattern](https://github.com/PolyXRD/PolyXRD-SynthPattern) |
-| **PolyXRD-RutAna** | 按 GB/T 30793—2014 测定 TiO₂ 颜料中锐钛型/金红石型比率：A 法（强度比值法，K 现场标定 + 双平行合格判定）与 B 法（Rietveld 全谱拟合，Hill–Howard 定量，Rwp ≤ 10%）双路线 | v1.5.0 | [manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.5.0.pdf](manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.5.0.pdf) | [PolyXRD/PolyXRD-RutAna](https://github.com/PolyXRD/PolyXRD-RutAna) |
+| **PolyXRD** | Comprehensive analysis suite for polycrystalline X-ray diffraction (XRD) patterns: data loading → preprocessing → peak detection → phase identification (FoM scoring / four-state element filtering / candidate deduplication / multi-database external support including XinMatch format databases) → Rietveld structure refinement (GSAS-II / MAUD / FullProf bridging) → report | v3.2.0 | [PolyXRD user manual v3.2.0 (PDF, Chinese)](manuals/PolyXRD/PolyXRD使用手册-v3.2.0.pdf) | [PolyXRD/PolyXRD](https://github.com/PolyXRD/PolyXRD) |
+| **PolyXRD-Converter** | XRD pattern format converter: 30+ formats for reading, 8 formats for writing, automatic identification of multi-vendor RAW binary data (Shimadzu / Rigaku / Scintag / Bruker / MDI), batch conversion, angle-axis guardrails | v1.4.1 | [PolyXRD-Converter user manual v1.4.1 (PDF, Chinese)](manuals/PolyXRD-Converter/PolyXRD-Converter使用手册-v1.4.1.pdf) | [PolyXRD/PolyXRD-Converter](https://github.com/PolyXRD/PolyXRD-Converter) |
+| **PolyXRD-CifCalc** | A CIF crystal-structure retrieval and generation tool for XRD: online COD / local database / extended-source search, CIF derivation and synthesis, structure fine-tuning, pymatgen validation, VESTA integration, trilingual UI | v1.6.0 | [PolyXRD-CifCalc user manual v1.6.0 (PDF, Chinese)](manuals/PolyXRD-CifCalc/PolyXRD-CifCalc使用手册-v1.6.0.pdf) | [PolyXRD/PolyXRD-CifCalc](https://github.com/PolyXRD/PolyXRD-CifCalc) |
+| **PolyXRD-GetCIF** | A lightweight CIF retrieval and acquisition tool (the lightweight sister edition of CifCalc): five data sources — COD / local database / AMCSD / Materials Project / Atomly — Standard and Plus editions (with 3D preview) | v1.0.0 | [PolyXRD-GetCIF user manual v1.0.0 (PDF, Chinese)](manuals/PolyXRD-GetCIF/PolyXRD-GetCIF使用手册-v1.0.0.pdf) | [PolyXRD/PolyXRD-GetCIF](https://github.com/PolyXRD/PolyXRD-GetCIF) |
+| **PolyXRD-SynthPattern** | XRD pattern synthesis: generates simulated diffraction patterns with realistic instrumental features from CIF structure factors (pseudo-Voigt peak shape, Kα2 doublet, preferred orientation, crystallite size / microstrain broadening, etc.); used for validating search methods and teaching | v1.3.1 | [PolyXRD-SynthPattern user manual v1.3.1 (PDF, Chinese)](manuals/PolyXRD-SynthPattern/PolyXRD-SynthPattern使用手册-v1.3.1.pdf) | [PolyXRD/PolyXRD-SynthPattern](https://github.com/PolyXRD/PolyXRD-SynthPattern) |
+| **PolyXRD-RutAna** | Determines the anatase/rutile ratio in TiO₂ pigments per GB/T 30793—2014: a dual route of Method A (intensity-ratio method, on-site K calibration + duplicate-pair acceptance decision) and Method B (Rietveld full-pattern fitting, Hill–Howard quantification, Rwp ≤ 10%) | v1.5.0 | [PolyXRD-RutAna user manual v1.5.0 (PDF, Chinese)](manuals/PolyXRD-RutAna/PolyXRD-RutAna使用手册-v1.5.0.pdf) | [PolyXRD/PolyXRD-RutAna](https://github.com/PolyXRD/PolyXRD-RutAna) |
 
-> 各软件的源代码仓库当前为**私有**；公开下载请前往各仓库的 **GitHub Releases** 页面（Release 与安装包公开可见）。
+> The source-code repositories of all software are currently **private**; for public downloads please go to the **GitHub Releases** page of each repository (Releases and installers are publicly visible).
 
-## 典型工作流
+## Typical Workflow
 
 ```
-仪器原始数据 (.RAW / .brml / .xrdml / .xy …)
+Instrument raw data (.RAW / .brml / .xrdml / .xy …)
         │
         ▼
-PolyXRD-Converter ──格式转换──► 两列文本 / xrdml / json …
+PolyXRD-Converter ──format conversion──► two-column text / xrdml / json …
         │
         ▼
-PolyXRD ──预处理 → 峰检测 → 物相检索 → Rietveld 精修──► 分析报告
+PolyXRD ──preprocessing → peak detection → phase identification → Rietveld refinement──► analysis report
         │                    │
-        │ 检索到的物相        │ 需要 CIF 初始模型？
+        │ identified phases   │ need a CIF initial model?
         ▼                    ▼
 PolyXRD-CifCalc / GetCIF ──CIF──► GSAS-II / FullProf / MAUD / VESTA
         │
         ▼
-PolyXRD-SynthPattern ──模拟谱──► 检索算法验证 / 教学演示
+PolyXRD-SynthPattern ──simulated pattern──► search algorithm validation / teaching demonstration
 
-专用测定线（GB/T 30793—2014 · TiO₂ 颜料晶型比率）
+Dedicated determination line (GB/T 30793—2014 · TiO₂ pigment crystal-form ratio)
         │
         ▼
-PolyXRD-RutAna ──A 法（强度比值 / K 标定 + 双平行）──► 锐钛型 : 金红石型 比率 + 检测报告
-              └──B 法（Rietveld 全谱拟合 / Hill–Howard）──┘
+PolyXRD-RutAna ──Method A (intensity ratio / K calibration + duplicate pairs)──► anatase : rutile ratio + test report
+              └──Method B (Rietveld full-pattern fitting / Hill–Howard)──┘
 ```
 
-- **拿到一份陌生谱图**：先用 Converter 认格式、转成标准文本，再进 PolyXRD 走完整分析流程。
-- **精修缺 CIF 初始模型**：用 CifCalc（全链路：检索 + 生成 + 微调 + 校验）或 GetCIF（只要一份 CIF）检索下载。
-- **验证检索算法 / 备课**：用 SynthPattern 从已知 CIF 合成「已知答案」的模拟谱。
-- **TiO₂ 颜料晶型比率检测**：用 RutAna 按 GB/T 30793—2014 出结果；A 法先用自己的标样现场标定 K，B 法直接全谱拟合，两者均可导出可归档的 HTML 报告。
+- **Getting an unfamiliar diffraction pattern**: first use Converter to identify the format and convert it to standard text, then run the full analysis workflow in PolyXRD.
+- **Refinement lacks a CIF initial model**: use CifCalc (full chain: retrieval + generation + fine-tuning + validation) or GetCIF (just one CIF) to search and download.
+- **Validating search algorithms / preparing lessons**: use SynthPattern to synthesize a simulated pattern with a "known answer" from a known CIF.
+- **TiO₂ pigment crystal-form ratio determination**: use RutAna to produce results per GB/T 30793—2014; Method A first calibrates K on site with your own standard sample, Method B performs direct full-pattern fitting, and both can export an archivable HTML report.
 
-## 手册内容说明
+## Manual Contents
 
-每份手册（约 15~27 页）均包含：
+Each manual (about 15~27 pages) contains:
 
-- **软件介绍与能力一览**——定位、核心模块、系统要求
-- **安装与启动**——发行形态、首次运行注意事项
-- **界面导览与操作流程**——图文对照，截图全部取自软件实际运行画面
-- **原理介绍**——检索打分、峰形函数、Rietveld、RAW 解析、谱图合成管线等
-- **使用技巧、注意事项与 FAQ**——常见错误的排查路径
-- **联系与许可**——学术 / 商业双许可要点
+- **Software introduction and capability overview** — positioning, core modules, system requirements
+- **Installation and startup** — distribution form, notes for first run
+- **UI tour and operation workflow** — illustrated side by side, all screenshots taken from the actual running software
+- **Principles** — search scoring, peak-shape functions, Rietveld, RAW parsing, pattern-synthesis pipeline, etc.
+- **Tips, notes and FAQ** — troubleshooting paths for common errors
+- **Contact and licensing** — key points of the academic / commercial dual license
 
-## 许可（License）
+## License
 
-家族全部软件统一采用**学术 / 商业双许可**：
+All software in the family uniformly adopts an **academic / commercial dual license**:
 
-- **学术研究与教学**：可免费使用（请保留版权与许可声明）；
-- **商业用途**：须在使用前联系版权持有人取得书面商业授权。
+- **Academic research and teaching**: free to use (please retain the copyright and license notice);
+- **Commercial use**: you must contact the copyright holder to obtain written commercial authorization before use.
 
-各软件的完整条款见 [`licenses/`](licenses/) 目录（`LICENSE` 英文 / `LICENSE-CN` 中文），与各软件仓库内随附文件一致。
+The full terms of each software are in the [`licenses/`](licenses/) directory (`LICENSE` in English / `LICENSE-CN` in Chinese), consistent with the files bundled in each software repository.
 
-版权所有 © 2026 PolyXRD Team · 联系邮箱：**sshztx@outlook.com**
+Copyright © 2026 PolyXRD Team · Contact email: **sshztx@outlook.com**
 
-### 第三方致谢
+### Third-Party Acknowledgments
 
-- **数据源**：COD（Crystallography Open Database）· AMCSD/RRUFF · Materials Project · Atomly 的公开数据服务
-- **开源依赖**：PySide6 (LGPL/GPL)、numpy (BSD)、reportlab、pymatgen、PyInstaller 等
-- **参考实现**：GSAS-II（Argonne 开源）在格式验证中作为 oracle 使用
+- **Data sources**: COD (Crystallography Open Database) · AMCSD/RRUFF · Materials Project · public data services of Atomly
+- **Open-source dependencies**: PySide6 (LGPL/GPL), numpy (BSD), reportlab, pymatgen, PyInstaller, etc.
+- **Reference implementation**: GSAS-II (open source from Argonne) used as an oracle in format validation
 
 ---
 
